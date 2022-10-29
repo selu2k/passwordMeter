@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Checker</title>
+</head>
+    
+<body>
+    <div style="display:flex; justify-content: center; align-items: center;">
+        <p id="content" style="display:flex; margin:auto; margin-top: 100px; font-size: larger;">
+
+        </p>
+    </div>
+    <script>
+        var x = prompt("Enter 1st Number: " , "");
+        var y = prompt("Enter 2nd Number: " , "");
+        if( x!= null && y!= null){
+            x = parseInt(x);
+            y = parseInt(y);
+            var a = x + y;
+            var s = x - y;
+            var m = x * y;
+            var q = Math.floor(x / y);
+            var p = document.getElementById("content");
+            p.innerHTML = "Sum : " + a + "<br>" + "Difference : " + s + "<br>" + "Product : " + m + "<br>" + "Quotient : " + q ; 
+        }
+    </script>
+</body>
+
+</html>

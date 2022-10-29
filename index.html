@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Password Meter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="pageheading">Password Strength Meter</h1>
+
+        <div class="passwordChecker">
+                <div class="group">
+                    <label for="pass" class="fas fa-key"></label>
+                <input type="password" name="pass" id="pass" placeholder="Password" oninput="checkPassword()" onmouseover="showLen()" onmouseout="hideLen()" />
+                
+                </div>
+                
+                <br>
+                <p id="shwLen"></p>
+                
+                <br>
+                <!-- <progress id="strengthBar" value="0" max="100"></progress> -->
+                <div class="progress">
+                    
+                    <div id="strengthBar" style="width:0%">
+                        <!-- <p class="percent">35%</p> -->
+                    </div>
+                </div>
+                <div id="suggest">
+                    <p>Suggested:</p>
+                    <p id="suggestPass"></p>
+                    <!-- <br> -->
+                    <button id="use" onclick="usePass()">Use</button>
+                </div>
+                
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

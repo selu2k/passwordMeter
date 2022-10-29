@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Checker</title>
+</head>
+<body>
+    <p id="welcome" style="display:absolute; margin-left: 100px; margin-top: 100px; font-size: larger;"></p>
+    <div id="formContainer">
+        <form id="userForm" action="">
+             <label for="uname">User Name</label> <input id="username" type="text" name="uname">
+             <label for="pass">Password</label> <input type="password" id="password" name="pass">
+            <input type="button" id="sbtbtn" value="Submit" name="submit" onclick="check()">
+            <p id="invalid" style="margin-top:10px ; font-size: larger; color: red;"></p>
+        </form>
+    </div>
+    <script>
+        function check(){
+            var u = document.getElementById("username").value;
+            var p = document.getElementById("password").value;
+            var welcome = document.getElementById("welcome");
+            var invalid = document.getElementById("invalid");
+            var form = document.getElementById("formContainer");
+            if(u == "Selukash" && p == "abcdef"){
+                form.style.display = "none";
+                welcome.innerHTML = "Welcome " + u ; 
+            }
+            else{
+                invalid.innerHTML = "Invalid" ;
+            }
+        }
+    </script>
+</body>
+
+</html>
